@@ -21,7 +21,7 @@ $newPurple: rgba(182, 132, 179, 1);
             right: 8rem;
 
             & .circle-btn--back {
-               border: 1px solid white;
+                border: 1px solid white;
             }
         }
 
@@ -354,6 +354,10 @@ $newPurple: rgba(182, 132, 179, 1);
                 padding: 0;
             }
 
+            & .swiper-wrapper {
+                padding-left: 3rem;
+            }
+
             & .h2-text {
                 display: flex;
                 flex-direction: column;
@@ -382,9 +386,7 @@ $newPurple: rgba(182, 132, 179, 1);
                 width: 26.8rem;
             }
 
-            @include mobile {
-                margin-left: 3rem;
-            }
+
 
 
             &-img {
@@ -457,7 +459,8 @@ $newPurple: rgba(182, 132, 179, 1);
 
     &.newyear-price {
         background-color: white;
-       padding: 12rem 0;
+        padding: 12rem 0;
+
         & .container {
             padding: 0;
 
@@ -669,22 +672,26 @@ $newPurple: rgba(182, 132, 179, 1);
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
-              &-img{
-                display: none;
-                @include mobile{
-                    display: flex;
-                    height: 74rem;
-                    & img{
-                        object-fit: cover;
-                        object-position: center;
+
+                &-img {
+                    display: none;
+
+                    @include mobile {
+                        display: flex;
+                        height: 74rem;
+
+                        & img {
+                            object-fit: cover;
+                            object-position: center;
+                        }
                     }
                 }
-              }
-              & .regular-4-text{
-                @include mobile{
-                    font-size: 3.4rem;
+
+                & .regular-4-text {
+                    @include mobile {
+                        font-size: 3.4rem;
+                    }
                 }
-              }
 
                 & h4,
                 & ul {
@@ -725,11 +732,12 @@ $newPurple: rgba(182, 132, 179, 1);
             display: flex;
             flex-direction: column;
             gap: 4rem;
-            & .regular-4-text{
-                @include mobile{
+
+            & .regular-4-text {
+                @include mobile {
                     font-size: 3.4rem;
                 }
-              }
+            }
         }
     }
 

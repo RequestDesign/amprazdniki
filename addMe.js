@@ -22,7 +22,7 @@ function initNewYearSelect() {
 
     new Swiper(target.querySelector('.swiper'), {
         slidesPerView: 1.15,
-        spaceBetween: 0,
+        spaceBetween: remToPx(3),
         breakpoints: {
             768: {
                 spaceBetween: remToPx(3),

@@ -346,6 +346,10 @@
     }
 }
 
+._newYear.select .container .swiper-wrapper {
+    padding-left: 3rem
+}
+
 ._newYear.select .container .h2-text {
     display: flex;
     flex-direction: column
@@ -375,12 +379,6 @@
     ._newYear.select .select__slide {
         align-self: flex-end;
         width: 26.8rem
-    }
-}
-
-@media(max-width: 48em) {
-    ._newYear.select .select__slide {
-        margin-left: 3rem
     }
 }
 
