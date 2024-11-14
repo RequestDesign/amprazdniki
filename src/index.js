@@ -23,7 +23,7 @@ const wow = new WOW({
 	boxClass: "wow",
 	animateClass: "animate__animated",
 	offset: 100,
-	mobile: true,
+	mobile: false,
 	live: true,
 });
 wow.init();
@@ -43,6 +43,7 @@ import "./js/pages/costumes";
 import "./js/pages/contacts";
 import "./js/pages/detail_show";
 import "./js/pages/detail_program";
+import "./js/pages/newYear";
 import "./index.scss";
 
 $(document).ready(function () {

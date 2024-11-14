@@ -1,0 +1,736 @@
+$newBlue: rgba(116, 185, 251, 1);
+$newPurple: rgba(182, 132, 179, 1);
+
+._rubles::after {
+    content: '₽';
+    font-size: 80%;
+}
+
+
+
+._newYear {
+    &.banner {
+        margin-bottom: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        position: relative;
+
+        & .banner-btn {
+            position: absolute;
+            z-index: 3;
+            top: 16rem;
+            right: 8rem;
+
+            & .circle-btn--back {
+               border: 1px solid white;
+            }
+        }
+
+        & .baner-main {
+            @include mobile {
+                bottom: 24rem;
+            }
+        }
+
+        & .banner__name {
+            @include mobile {
+                bottom: 8rem;
+                left: 3rem;
+
+                & .banner__quote {
+                    text-align: left;
+
+                }
+            }
+
+        }
+    }
+
+    &.home-advantages-slide {
+        & .home-advantages-slide_bottom {
+
+            & .home-advantages-slide--subtitle,
+            & .home-advantages-slide--text {
+                color: white !important;
+            }
+
+        }
+
+        &:nth-child(2) {
+            background-color: $newBlue;
+
+
+        }
+
+        &:nth-child(3) {
+            background-color: $newPurple;
+
+        }
+
+        &:nth-child(4) {
+            background-color: rgba(224, 138, 164, 1);
+
+        }
+
+        @include desktop {
+            width: 50%;
+            height: 80rem;
+            margin-left: auto;
+            background-color: rgba(221, 119, 119, 1);
+
+            &:nth-child(2) {
+
+                margin-left: 0;
+                margin-right: auto;
+
+            }
+
+            &:nth-child(3) {
+                margin-left: auto;
+                margin-right: 28rem;
+            }
+
+            &:nth-child(4) {
+                margin-left: 28rem;
+                margin-right: auto;
+            }
+
+            & .home-advantages-slide--img {
+                height: 42rem;
+                display: flex;
+
+                & img {
+                    width: 100%;
+                    height: unset;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            & .home-advantages-slide_bottom {
+                height: 20rem;
+                margin-top: 3.2rem;
+                margin-bottom: 10rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                & .home-advantages-slide--subtitle & .home-advantages-slide--text {
+                    color: white !important;
+                }
+
+            }
+        }
+
+        @include mobile {
+            & .home-advantages-slide_bottom {
+                height: 100%;
+                justify-content: space-between;
+                display: flex;
+                flex-direction: column;
+                box-sizing: border-box;
+                padding-top: 5rem;
+            }
+        }
+
+
+
+    }
+
+    &.banner__quote {
+        font-family: 'Avanti';
+        display: flex;
+
+
+        @include desktop {
+            text-align: left;
+            width: 50rem;
+            font-size: 2.6rem;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+
+    &.hurryUp {
+        background-color: white;
+        padding: 20rem 0;
+        margin-top: 0;
+
+        & .h2-text {
+            @include mobile {
+                font-size: 5rem;
+            }
+        }
+
+        & .hurryUp__grid {
+            display: grid;
+            position: relative;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(2, 33rem);
+            grid-template-areas:
+                '. first big big'
+                'second small big big';
+            gap: 3rem;
+            margin-top: 10rem;
+
+            @include mobile {
+                grid-template-columns: 100%;
+                grid-template-rows: auto auto 36rem;
+                grid-template-areas:
+                    'first'
+                    'second'
+                    'small';
+                margin-top: 3rem;
+                gap: 2rem;
+                padding-bottom: 10rem;
+            }
+
+            &-first {
+                grid-area: first;
+                //styleName: text regular 18 CAPS;
+                font-family: Avanti;
+                font-size: 1.8rem;
+                font-weight: 400;
+                line-height: 110%;
+                text-align: right;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+
+                @include mobile {
+                    text-align: left;
+                }
+
+            }
+
+            &-img {
+                position: relative;
+                z-index: 3;
+                display: flex;
+
+                &._big {
+                    grid-area: big;
+
+                    @include mobile {
+                        display: none;
+                    }
+                }
+
+                &._small {
+                    grid-area: small;
+                }
+
+                & img {
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            &-second {
+                align-self: flex-end;
+                grid-area: second;
+                font-family: Avanti;
+                font-size: 1.8rem;
+                font-weight: 400;
+                line-height: 110%;
+                text-align: right;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+
+                @include mobile {
+                    text-align: left;
+
+                }
+            }
+
+            &-btn {
+                position: absolute;
+                top: -7rem;
+                left: 6rem;
+                z-index: 1;
+
+                @include mobile {
+                    top: 40rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+
+        }
+
+    }
+
+    &.secrets {
+        background-color: rgba(245, 245, 245, 1);
+        margin-bottom: 0;
+
+        & .secrets__c {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            & .h2-text {
+                margin-bottom: 1.2rem;
+
+                @include mobile {
+                    font-size: 5rem;
+                }
+            }
+
+        }
+
+
+    }
+
+    &.call {
+        & .call__c {
+            display: grid;
+            grid-template-columns: .9fr 1fr;
+            gap: 8rem;
+            position: relative;
+
+            @include mobile {
+                grid-template-columns: 100%;
+                padding-bottom: 15rem;
+            }
+
+            &-left {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+
+                &-btn {
+                    transform: translate(2rem, 4rem);
+
+                    @include mobile {
+                        position: absolute;
+                        z-index: 1;
+                        right: 5rem;
+                        bottom: -4rem;
+                    }
+                }
+
+                & .h4-text {
+                    margin-left: 30rem;
+
+                    @include mobile {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            &-right {
+                position: relative;
+                z-index: 3;
+                height: 99rem;
+                display: flex;
+
+                @include mobile {
+                    height: 74rem;
+                }
+
+                & img {
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+
+    &.select {
+        & .swiper {
+            margin-top: 6rem;
+            height: 70rem;
+
+            @include mobile {
+                height: 96rem;
+            }
+        }
+
+        & .container {
+            @include mobile {
+                padding: 0;
+            }
+
+            & .h2-text {
+                display: flex;
+                flex-direction: column;
+
+                @include mobile {
+                    padding: 0 3.2rem;
+                }
+
+                @include desktop {
+                    & span+span {
+                        margin-left: 40rem;
+                    }
+                }
+            }
+        }
+
+        & .select__slide {
+
+            position: relative;
+            transition: width .5s;
+
+            height: fit-content;
+
+            @include desktop {
+                align-self: flex-end;
+                width: 26.8rem;
+            }
+
+            @include mobile {
+                margin-left: 3rem;
+            }
+
+
+            &-img {
+                position: relative;
+                z-index: 3;
+                display: flex;
+                height: 30rem;
+                transition: height .5s;
+
+                @include mobile {
+                    height: 74rem;
+                }
+
+                & img {
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            & .regular-3-text.mobile {
+                margin-top: 2rem;
+            }
+
+            &-btn {
+                position: absolute;
+                z-index: 1;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: rgba(116, 185, 251, 1);
+                border-radius: 1.5rem;
+                display: flex;
+
+                padding: 2.5rem;
+                color: white;
+                justify-content: space-between;
+                margin-top: 1.6rem;
+                transition: transform .5s;
+
+                & svg {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+
+                @include mobile {
+                    transform: translateY(120%);
+                }
+
+            }
+
+            @include desktop {
+                margin-bottom: 10rem;
+
+                &._hover {
+                    width: 56.8rem;
+
+                    & .select__slide-img {
+                        height: 56rem;
+                    }
+
+                    & .select__slide-btn {
+                        transform: translateY(120%);
+                    }
+
+                }
+            }
+
+        }
+    }
+
+    &.newyear-price {
+        background-color: white;
+       padding: 12rem 0;
+        & .container {
+            padding: 0;
+
+            & .h2-text {
+                @include mobile {
+                    padding: 0 3.2rem;
+
+                }
+            }
+        }
+
+        & .newyear-price__top {
+            display: flex;
+            margin: 5rem 0;
+            width: 100%;
+
+            @include mobile {
+                display: none;
+            }
+
+
+
+
+            & .swiper-pagination {
+                margin-top: auto;
+                margin-left: 20rem;
+                position: relative;
+                align-items: flex-end;
+            }
+
+            & .swiper-navigation {
+                margin-left: auto;
+                display: flex;
+                gap: 2rem;
+                align-items: flex-end;
+
+                & .swiper-btn {
+                    width: 12rem;
+                    height: 12rem;
+                    border-radius: 50%;
+                    border: 2px solid rgba(41, 41, 41, 0.2);
+                    background-position: center;
+                    background-size: 50%;
+                    background-repeat: no-repeat;
+
+                    &-prev {
+                        background-image: url(../../assets/images/icon/cursor-left-black.svg);
+                    }
+
+                    &-next {
+                        background-image: url(../../assets/images/icon/cursor-right-black.svg);
+
+                    }
+                }
+            }
+        }
+
+        & .newyear-price__sliders {
+            display: grid;
+            grid-template-columns: 86.5rem 86.5rem;
+
+            gap: 3rem;
+            height: 61rem;
+
+            @include mobile {
+                grid-template-columns: 100%;
+                gap: 6rem;
+                height: auto;
+                margin-top: 10rem;
+            }
+
+            & .swiper {
+                width: 100%;
+
+                &-wrapper {
+                    @include mobile {
+                        padding-left: 2rem;
+                    }
+                }
+            }
+
+            & .newyear-price__slider-images {
+                &-e {
+                    position: relative;
+                    display: flex;
+                    height: 61rem;
+
+
+                    & img {
+                        object-fit: cover;
+                        object-position: center;
+                    }
+
+                    &-text {
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        z-index: 1;
+                        background: linear-gradient(180.12deg, rgba(0, 0, 0, 0) 46.16%, #000000 99.89%);
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        align-items: center;
+                        justify-content: flex-end;
+                        color: white;
+                        text-shadow: white 1px 0 10px;
+                        box-sizing: border-box;
+                        padding: 2.5rem;
+
+                        & .h3-text {
+                            font-size: 4.5rem;
+
+                            @include mobile {
+                                font-size: 3.6rem;
+                                margin-bottom: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            & .newyear-price__slider-table {
+                &-e {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-auto-rows: min-content;
+
+                    &-cell {
+
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: .5rem;
+
+                        padding: .8rem 2rem;
+                        box-sizing: border-box;
+
+                        &:nth-child(1) {
+                            border-right: 1px solid rgba(41, 41, 41, 1);
+                        }
+
+                        &:nth-child(2) {
+                            border-left: 1px solid rgba(41, 41, 41, 1);
+                        }
+
+                        &:nth-child(3) {
+                            border-top: 2px solid rgba(41, 41, 41, 1);
+                            border-right: 1px solid rgba(41, 41, 41, 1);
+                            border-bottom: 2px solid rgba(41, 41, 41, 1);
+                        }
+
+                        &:nth-child(4) {
+                            border-top: 2px solid rgba(41, 41, 41, 1);
+                            border-left: 1px solid rgba(41, 41, 41, 1);
+                            border-bottom: 2px solid rgba(41, 41, 41, 1);
+                        }
+
+                        &._row {
+                            grid-column: 1/ span 2;
+                        }
+
+                        & ._row {
+                            grid-column: 1/ span 2;
+                            margin-bottom: 1.5rem;
+                        }
+
+                        & ._center {
+                            justify-self: center;
+                            text-align: center;
+                        }
+
+                        & ._bottom {
+                            margin-top: auto;
+                        }
+
+                        & ._cell {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+
+                            & ._rubles {
+                                color: rgba(182, 132, 179, 1);
+                            }
+
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+
+    &.children {
+        & .children__c {
+            display: grid;
+            grid-template-columns: auto 70rem;
+            gap: 15rem;
+
+            @include mobile {
+                grid-template-columns: 100%;
+            }
+
+            &-left {
+                margin-top: 5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+              &-img{
+                display: none;
+                @include mobile{
+                    display: flex;
+                    height: 74rem;
+                    & img{
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+              }
+              & .regular-4-text{
+                @include mobile{
+                    font-size: 3.4rem;
+                }
+              }
+
+                & h4,
+                & ul {
+                    margin-bottom: 1.5rem;
+                }
+
+                & ul {
+                    padding-left: 1.5rem;
+
+                    @include mobile {
+                        padding-left: 3rem;
+                    }
+
+                    & li {
+                        list-style: disc;
+                    }
+                }
+            }
+
+            &-right {
+
+                height: 107rem;
+                display: flex;
+
+                @include mobile {
+                    display: none;
+                }
+
+                & img {
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+
+        & .children__bottom {
+            margin-top: 6rem;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            & .regular-4-text{
+                @include mobile{
+                    font-size: 3.4rem;
+                }
+              }
+        }
+    }
+
+}

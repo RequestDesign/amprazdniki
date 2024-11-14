@@ -1,5 +1,7 @@
 @import "style/fonts";
 @import "style/libs/set";
+@import "style/mixins";
+
 @import "style/style";
 @import "style/components/header";
 @import "style/components/footer";
@@ -14,6 +16,7 @@
 @import "style/pages/contacts";
 @import "style/pages/detail_show";
 @import "style/pages/detail_program";
+@import "style/pages/newYear";
 
 @import "style/pages/request";
 @import "style/pages/decor";
