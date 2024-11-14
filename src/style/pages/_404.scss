@@ -1,0 +1,135 @@
+.page-404 {
+	margin-top: 6.7rem;
+	padding-top: 8rem;
+	padding-bottom: 4.1rem;
+	margin-bottom: 0;
+	// .404__inner
+	&__inner {
+		height: 74rem;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	// .404__title
+	&__title {
+		position: relative;
+		z-index: 1;
+		width: 86.5rem;
+		color: #292929;
+		font-size: 13rem;
+		line-height: 115.5%; /* 150.15px */
+		text-transform: uppercase;
+
+		&--tar {
+			text-align: right;
+		}
+	}
+	// .404__pictures
+	&__pictures {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		--animate-duration: 2s;
+		--animate-delay: 2s;
+		&-container {
+			display: flex;
+			align-items: center;
+			gap: 3rem;
+
+			position: absolute;
+
+			img {
+				width: 12rem;
+				height: 12rem;
+				object-fit: cover;
+			}
+			&--top {
+				top: 0;
+				right: 0;
+			}
+			&--middle {
+				left: 59.7rem;
+				top: 23.7rem;
+			}
+			&--vertical {
+				flex-direction: column;
+				left: 0;
+				bottom: 5rem;
+			}
+		}
+	}
+	// .404__footer
+	&__footer {
+		display: flex;
+		align-self: flex-end;
+		gap: 8rem;
+	}
+}
+
+@media (max-width: 48em) {
+	.page-404 {
+		margin-top: 10.4rem;
+		padding-top: 12rem;
+		padding-bottom: 8rem;
+		// .404__inner
+		&__inner {
+			height: 131.4rem;
+		}
+		// .404__title
+		&__title {
+			width: 90%;
+			font-size: 10rem;
+			line-height: normal; /* 150.15px */
+
+			&--tar {
+				text-align: right;
+			}
+		}
+		// .404__pictures
+		&__pictures {
+			&-container {
+				gap: 3.2rem;
+				&--top {
+					top: 22.6rem;
+					right: 0;
+				}
+				&--middle {
+					left: 0rem;
+					top: 34.6rem;
+					width: 33.4rem;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					height: 24rem;
+					gap: 0;
+
+					> picture:nth-child(2) {
+						align-self: flex-end;
+					}
+				}
+				&--vertical {
+					flex-direction: column;
+					left: 0;
+					bottom: 22.8rem;
+				}
+			}
+		}
+		// .404__footer
+		&__footer {
+			display: flex;
+			flex-direction: column;
+			align-self: flex-start;
+			gap: 18.6rem;
+
+			.page-404__title {
+				align-self: flex-end;
+			}
+		}
+
+		&__btn {
+			align-self: flex-end;
+		}
+	}
+}

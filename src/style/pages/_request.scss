@@ -1,0 +1,247 @@
+.request {
+    &.white {
+        padding: 25rem 0;
+        background: #FFF;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        gap: 1.5rem;
+    }
+    &--left {
+        width: 38.3rem;
+        flex: none;
+
+        &_text {
+            margin-bottom: 4.8rem;
+        }
+        .form {
+            width: 30rem;
+        }
+    }
+    &-btn {
+        position: relative;
+        right: -9rem;
+        margin-bottom: -12rem;
+
+        &--second {
+            position: relative;
+            left: 6rem;
+        }
+    }
+    &--center {
+        width: 96.5rem;
+        flex: none;
+        margin-right: auto;
+        text-align: center;
+    }
+    &--img {
+        width: 56.6rem;
+        height: 54.5rem;
+        margin: -4.2rem auto;
+        position: relative;
+        z-index: 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &--right {
+        display: flex;
+        flex-direction: column;
+        width: 32.9rem;
+        text-align: right;
+    }
+    &--icon {
+        width: 4rem;
+        height: 4rem;
+        margin-bottom: 17rem;
+        margin-left: auto;
+
+        svg {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+    &--text {
+        position: relative;
+        margin-bottom: 4.8rem;
+        padding-bottom: 4.8rem;
+
+        &::after {
+            display: block;
+            content: '';
+            width: 5.6rem;
+            height: 0.1rem;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: #292929;
+        }
+    }
+    &--name {
+        color: #866B96;
+    }
+}
+.request-modal {
+    &__wrapper {
+        display: flex;
+        gap: 5rem;
+    }
+    &__img {
+        width: 50rem;
+        height: 51.8rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__right {
+        width: 55rem;
+        padding-right: 16.7rem;
+    }
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 4.8rem; 
+    }
+    &__btn {
+        position: absolute;
+        bottom: -16.5rem;
+        right: -9.1rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .request {
+        &.white {
+            padding: 26rem 0;
+        }
+        .container {
+            display: grid;
+            align-items: center;
+            text-transform: uppercase;
+            gap: 1.5rem;
+        }
+        &--left {
+            width: auto;
+            flex: none;
+            grid-row: 3;
+    
+            &_text {
+                margin-bottom: 8rem;
+                font-size: 5rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 110%;
+            }
+            .form {
+                width: auto;
+            }
+        }
+        &-btn {
+            position: relative;
+            right: 0;
+            margin-bottom: 0;
+            margin-left: auto;
+
+            &--second {
+                position: relative;
+                left: 9rem;
+            }
+        }
+        &--center {
+            width: 100%;
+            flex: none;
+            margin-right: auto;
+            text-align: center;
+            margin-bottom: 13.6rem;
+
+            .h1-text {
+                font-size: 8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 102.5%;
+            }
+        }
+        &--img {
+            width: 48rem;
+            height: 48rem;
+            margin: -2.6rem auto -2.4rem;
+        }
+        &--right {
+            margin-bottom: 26rem;
+            gap: 4rem;
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            text-align: left;
+        }
+        &--icon {
+            width: 6rem;
+            height: 6rem;
+            margin-bottom: 0;
+            margin-left: 0;
+    
+            svg {
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+        &--text {
+            position: relative;
+            margin-bottom: 4.8rem;
+            padding-bottom: 4.8rem;
+            text-transform: none;
+    
+            &::after {
+                display: block;
+                content: '';
+                width: 11.2rem;
+                height: 0.2rem;
+                position: absolute;
+                bottom: 0;
+                right: auto;
+                left: 0;
+                background: #292929;
+            }
+        }
+        &--name {
+            color: #866B96;
+        }
+    }
+
+    .request-modal {
+        // .modal-wrapper {
+        //     width: 68.6rem;
+        //     margin: 1rem 0;
+        // }
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 6.4rem;
+        }
+        &__img {
+            width: 100%;
+            height: 32rem;
+        }
+        &__right {
+            width: 100%;
+            padding-right: 0;
+        }
+        &__title {
+            text-transform: uppercase;
+            margin-bottom: 4.8rem; 
+        }
+        &__btn {
+            position: relative;
+            bottom: 0;
+            right: 0;
+            margin-left: auto;
+        }
+    }
+}

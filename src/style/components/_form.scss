@@ -1,0 +1,37 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+
+    &_item {
+        input {
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            text-transform: uppercase;
+            padding-bottom: 1.8rem;
+            border-bottom: 0.1rem solid rgba(41, 41, 41, 0.30);
+            width: 100%;
+        }
+        input::placeholder {
+            color: rgba(41, 41, 41, 0.20);
+        }
+    }
+}
+
+@media (max-width: 48em) {
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 3.6rem;
+    
+        &_item {
+            input {
+                font-size: 3rem;
+                padding-bottom: 3.6rem;
+                border-bottom: 0.2rem solid rgba(41, 41, 41, 0.30);
+            }
+        }
+    }
+}
