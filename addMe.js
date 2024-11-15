@@ -13,7 +13,21 @@ import {
     Mousewheel,
 } from "swiper/modules";
   */
+/* 
 
+это надо изменить
+
+const wow = new WOW({
+	boxClass: "wow",
+	animateClass: "animate__animated",
+	offset: 100,
+	mobile: true, <===== вот тут надо поставить false, это отключит анимации скролла на мобиле
+	live: true, 
+});
+
+
+
+*/
 
 function initNewYearSelect() {
 
