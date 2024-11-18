@@ -50,11 +50,11 @@ $newPurple: rgba(182, 132, 179, 1);
         }
     }
 
-    &.home-advantages-slide {
-        & .home-advantages-slide_bottom {
+    &.adv-4-slide {
+        & .adv-4-slide_bottom {
 
-            & .home-advantages-slide--subtitle,
-            & .home-advantages-slide--text {
+            & .adv-4-slide--subtitle,
+            & .adv-4-slide--text {
                 color: white !important;
             }
 
@@ -77,29 +77,11 @@ $newPurple: rgba(182, 132, 179, 1);
         }
 
         @include desktop {
-            width: 50%;
             height: 80rem;
-            margin-left: auto;
+          
             background-color: rgba(221, 119, 119, 1);
 
-            &:nth-child(2) {
-
-                margin-left: 0;
-                margin-right: auto;
-
-            }
-
-            &:nth-child(3) {
-                margin-left: auto;
-                margin-right: 28rem;
-            }
-
-            &:nth-child(4) {
-                margin-left: 28rem;
-                margin-right: auto;
-            }
-
-            & .home-advantages-slide--img {
+            & .adv-4-slide--img {
                 height: 42rem;
                 display: flex;
 
@@ -111,7 +93,7 @@ $newPurple: rgba(182, 132, 179, 1);
                 }
             }
 
-            & .home-advantages-slide_bottom {
+            & .adv-4-slide_bottom {
                 height: 20rem;
                 margin-top: 3.2rem;
                 margin-bottom: 10rem;
@@ -119,7 +101,7 @@ $newPurple: rgba(182, 132, 179, 1);
                 flex-direction: column;
                 justify-content: space-between;
 
-                & .home-advantages-slide--subtitle & .home-advantages-slide--text {
+                & .adv-4-slide--subtitle & .adv-4-slide--text {
                     color: white !important;
                 }
 
@@ -127,7 +109,7 @@ $newPurple: rgba(182, 132, 179, 1);
         }
 
         @include mobile {
-            & .home-advantages-slide_bottom {
+            & .adv-4-slide_bottom {
                 height: 100%;
                 justify-content: space-between;
                 display: flex;
@@ -746,4 +728,143 @@ $newPurple: rgba(182, 132, 179, 1);
         }
     }
 
+}
+
+.adv-4 {
+	text-transform: uppercase;
+	overflow: hidden;
+	padding: 25rem 0 0;
+	// margin: -25rem 0;
+
+	&-swiper {
+		// height: 61rem;
+		margin-top: 3rem;
+
+		.swiper-wrapper {
+			@include desktop {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 3rem;
+			}
+		}
+	}
+
+	&-slide {
+		@include desktop {
+			width: 100% !important;
+			margin: 0;
+			
+		}
+
+		height: 61rem;
+		// transform: translateY(100vh);
+
+		&:nth-child(1) {
+			background: #D77;
+			color: #FFF;
+			margin-top: 0;
+
+			.adv-4-slide--subtitle,
+			.adv-4-slide--text {
+				color: rgba(255, 255, 255, 0.80);
+			}
+		}
+
+		&:nth-child(2) {
+			background: #FFF;
+
+			@include desktop {
+				margin-top: -15rem;
+			}
+
+
+			.adv-4-slide--subtitle,
+			.adv-4-slide--text {
+				color: rgba(41, 41, 41, 0.50);
+			}
+		}
+
+		&:nth-child(3) {
+			background: #B684B3;
+			color: #FFF;
+
+
+
+			.adv-4-slide--subtitle,
+			.adv-4-slide--text {
+				color: rgba(255, 255, 255, 0.80);
+			}
+		}
+
+		&:nth-child(4) {
+			background: #E08AA4;
+			color: #FFF;
+
+			@include desktop {
+				margin-top: -15rem;
+			}
+
+			.adv-4-slide--subtitle,
+			.adv-4-slide--text {
+				color: rgba(255, 255, 255, 0.80);
+			}
+		}
+
+		padding: 3.2rem;
+		display: flex;
+		flex-direction: column;
+
+		&:nth-child(2n) {
+			.adv-4-slide--top {
+				row-gap: 3.2rem;
+				column-gap: 3.2rem;
+
+				.adv-4-slide--title {
+					grid-column: 1;
+					width: max-content;
+				}
+
+				.adv-4-slide--img {
+					grid-column: 1/3;
+					grid-row: 1;
+					width: 100%;
+					height: 28.5rem;
+					margin-right: 0;
+				}
+
+				.adv-4-slide--subtitle {
+					grid-column: 2;
+				}
+			}
+		}
+
+		&--top {
+			margin-bottom: auto;
+
+			display: grid;
+			row-gap: 1.7rem;
+
+
+			.adv-4-slide--title {
+				grid-column: 1/3;
+			}
+
+			.adv-4-slide--img {
+				grid-column: 1;
+				width: 32.2rem;
+				height: 28.5rem;
+				margin-right: 3.6rem;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+
+			.adv-4-slide--subtitle {
+				grid-column: 2;
+			}
+		}
+	}
 }
